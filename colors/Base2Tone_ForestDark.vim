@@ -4,10 +4,10 @@
 " This enables the coresponding base16-shell script to run so that
 " :colorscheme works in terminals supported by base16-shell scripts
 " User must set this variable in .vimrc
-"   let g:base16_shell_path=base16-builder/output/shell/
+"   let g:base2_shell_path='~/.vim/bundle/Base2Tone-vim/scripts'
 if !has('gui_running')
-  if exists("g:base16_shell_path")
-    execute "silent !/bin/sh ".g:base16_shell_path."/Base2Tone_ForestDark.".&background.".sh"
+  if exists("g:base2_shell_path")
+    execute "silent !/bin/sh ".g:base2_shell_path."/Base2Tone_ForestDark.sh"
   endif
 endif
 
@@ -30,30 +30,30 @@ let s:gui0E = "5c705c"
 let s:gui0F = "4f634f"
 
 " Terminal color definitions
-let s:cterm00 = "236   "
-let s:cterm03 = "242   "
-let s:cterm05 = "243   "
-let s:cterm07 = "194  "
-let s:cterm08 = "239   "
-let s:cterm0A = "150   "
-let s:cterm0B = "244   "
-let s:cterm0C = "192   "
-let s:cterm0D = "155   "
-let s:cterm0E = "242   "
-if exists('base16colorspace') && base16colorspace == "256"
-  let s:cterm01 = "237   "
-  let s:cterm02 = "240   "
-  let s:cterm04 = "245   "
-  let s:cterm06 = "251   "
-  let s:cterm09 = "143   "
-  let s:cterm0F = "241   "
+let s:cterm00 = "00"
+let s:cterm03 = "08"
+let s:cterm05 = "07"
+let s:cterm07 = "15"
+let s:cterm08 = "01"
+let s:cterm0A = "03"
+let s:cterm0B = "02"
+let s:cterm0C = "06"
+let s:cterm0D = "04"
+let s:cterm0E = "05"
+if exists('base2colorspace') && base2colorspace == "256"
+  let s:cterm01 = "18"
+  let s:cterm02 = "19"
+  let s:cterm04 = "20"
+  let s:cterm06 = "21"
+  let s:cterm09 = "16"
+  let s:cterm0F = "17"
 else
-  let s:cterm01 = "237   "
-  let s:cterm02 = "240   "
-  let s:cterm04 = "245   "
-  let s:cterm06 = "251   "
-  let s:cterm09 = "143   "
-  let s:cterm0F = "241   "
+  let s:cterm01 = "10"
+  let s:cterm02 = "11"
+  let s:cterm04 = "12"
+  let s:cterm06 = "13"
+  let s:cterm09 = "09"
+  let s:cterm0F = "14"
 endif
 
 " Theme setup
